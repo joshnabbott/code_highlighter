@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<syntax>
+	<ruby>
+		<item>
+			<name>String</name>
+			<class>string</class>
+			<expected>'[^']*'|"[^"]*"</expected>
+		</item>
+		<item>
+			<name>Comments</name>
+			<class>comment</class>
+			<expected>#[^\n{]+</expected>
+		</item>
+		<item>
+			<name>Entity</name>
+			<class>entity</class>
+			<expected>(class|def|module)[^\n=]+</expected>
+		</item>
+		<item>
+			<name>Keywords</name>
+			<class>keyword</class>
+			<expected>\b(do|end|self|class|def|if|module|yield|then|else|for|until|unless|while|elsif|case|when|break|retry|redo|rescue|require|raise)\b[^=]</expected>
+		</item>
+		<item>
+			<name>Symbol</name>
+			<class>symbol</class>
+			<expected>([^:()])(:[A-Za-z0-9_!?]+)</expected>
+		</item>
+	</ruby>
+	<css>
+		<item>
+			<name>Comment</name>
+			<class>comment</class>
+			<expected>\/\*[^*]*\*+([^\/][^*]*\*+)*\/</expected>
+		</item>
+	</css>
+</syntax>
