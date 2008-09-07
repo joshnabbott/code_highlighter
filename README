@@ -3,8 +3,6 @@ Code Highlighter
 
 This is a basic code syntax highlighter using Hpricot and XML. 
 
-
-
 Example Rails Usage
 ==================
 

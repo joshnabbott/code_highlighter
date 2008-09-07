@@ -54,8 +54,8 @@ module RubyInfusion
       doc.highlight(config).to_s
     end
 
-    def highlight_textile_code(text="", config=nil)
-      highlight_code(textilize(text), config)
+    def highlight_textile_code(text="")
+      highlight_code(textilize(text))
     end
 
   end
