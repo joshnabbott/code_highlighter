@@ -3,8 +3,18 @@ Code Highlighter
 
 This is a basic code syntax highlighter using Hpricot and XML. 
 
-Example View Usage
+
+
+Example Rails Usage
 ==================
+
+# Add the associated programming language to the <pre>
+# tag class attribute
+<pre class="ruby">
+	<code>
+		<%= link_to 'Home', root_path %>
+	</code>
+</pre>
 
 # Basic code highlighting
 <%= highlight_code(@article.article) %>
