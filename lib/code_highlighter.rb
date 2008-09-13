@@ -22,7 +22,7 @@ module Hpricot
 
       (self/:pre).each do |pre|
         
-        language_class = pre.attributes['class']        
+        language_class = pre.attributes['class']
         language       = (syntax/language_class.to_sym).first if language_class
         
         if language
@@ -32,7 +32,9 @@ module Hpricot
           
             (item/:expected).each do |expected|
               (pre/:code).each do |code|
-                code.text_gsub!(Regexp.new(expected.innerHTML)) {|match| "<span class='#{match_class}'>#{match}</span>"}
+                code.text_gsub!(Regexp.new(expected.innerHTML)) do |match|
+                  "<span class=\"#{match_class}\">#{match}</span>".gsub(/\r|\n/,'')
+                end
               end
             end
           
